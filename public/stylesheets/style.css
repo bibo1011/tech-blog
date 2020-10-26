@@ -65,6 +65,7 @@ a{
   color: #225ca3;
   font-weight: bold;
   transition: color .1s;
+  padding: 10px
 }
 a:hover {
   color: #3486eb;
