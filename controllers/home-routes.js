@@ -9,24 +9,24 @@ router.get('/', (req, res) => {
     Post.findAll({
       attributes: [
         'id',
-        'post_url',
+        'content',
         'title',
         'created_at',
       ],
-      include: [
-        {
-          model: Comment,
-          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-          include: {
-            model: User,
-            attributes: ['username']
-          }
-        },
-        {
-          model: User,
-          attributes: ['username']
-        }
-      ]
+      // include: [
+      //   {
+      //     model: Comment,
+      //     attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+      //     include: {
+      //       model: User,
+      //       attributes: ['username']
+      //     }
+      //   },
+      //   {
+      //     model: User,
+      //     attributes: ['username']
+      //   }
+      // ]
     })
     .then(dbPostData => {
         // pass a single post object into the homepage template
@@ -83,10 +83,9 @@ router.get('/post/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'post_url',
+      'content',
       'title',
       'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
       {
