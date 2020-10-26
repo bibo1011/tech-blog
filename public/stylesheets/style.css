@@ -90,19 +90,30 @@ form h4 {
 }
 form input{
   margin: 10px;
-  padding-left: 75%;
-  padding-top: 2%
+  padding: 10px 1139px 10px 5px
 }
-button {
+.signup-form button {
   background-color: #225ca3;
   border: 0;
-  padding: 1% 46% 1% 47%;
+  padding: 10px 557px 10px 631px;
   color: white;
   font-weight: bold;
   transition: background-color .1s;
   cursor: pointer;
   border-radius: 5px;
-  margin: 10px
+  margin: 10px;
+}
+.login-form button {
+  background-color: #225ca3;
+  border: 0;
+  padding: 10px 632px 10px 632px;
+  color: white;
+  font-weight: bold;
+  transition: background-color .1s;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  
 }
 button:hover {
   background-color: #3486eb;
