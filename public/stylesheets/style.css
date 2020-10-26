@@ -1,20 +1,116 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 header {
-  padding: 10px 35px 10px 35px;
-  background: brown;
+  padding: 10px 35px 20px 35px;
+  background: #fc5c65;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
 }
 header nav ul{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    list-style: none;
-    margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 20px 0 20px 0
+}
+header nav ul li{
+  padding-right: 30px
+}
+header h2{
+  background-color: #fed330;
+  padding: 10px;
+  text-align: center;
+  border: solid;
+  border-radius: 5px
+}
+.post-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.post {
+  margin-bottom: 2%;
+  line-height: 150%;
+  border: solid;
+  border-radius: 5px;
+  margin: 10px
+}
+.post .title span {
+  font-style: italic;
+  font-size: 90%;
+  color: #7d7d7d;
+}
+.text {
+  padding: 10px;
+}
+main {
+  flex: 1;
+  padding: 2% 4%;
+  background-color: #a55eea;
+}
+.title{
+  display: flex;
+  justify-content: space-between;
+  background-color: #fa8231;
+  padding: 10px
+}
+a{
+  text-decoration: none;
+  color: #225ca3;
+  font-weight: bold;
+  transition: color .1s;
+}
+a:hover {
+  color: #3486eb;
+}
+form{
+  border: solid;
+}
+form > div {
+  margin-bottom: 2%;
+}
+form label {
+  display: block;
+  padding: 10px
+}
+form h3 {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fa8231;
+  padding: 10px
+}
+form h4 {
+  padding: 10px
+}
+form input{
+  margin: 10px;
+  padding-left: 75%;
+  padding-top: 2%
+}
+button {
+  background-color: #225ca3;
+  border: 0;
+  padding: 1% 46% 1% 47%;
+  color: white;
+  font-weight: bold;
+  transition: background-color .1s;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px
+}
+button:hover {
+  background-color: #3486eb;
+}
+footer {
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-size: 110%;
 }
