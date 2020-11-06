@@ -22,6 +22,7 @@ app.set('view engine', 'handlebars');
 app.use(
   session({
     secret: 'This is a major secret!',
+    cookie: {},
     resave: false,
     saveUninitialized: false,
     store: new SequelizeStore({
@@ -34,11 +35,11 @@ app.use(
 app.use(routes);
 
 // turn on connection to db and server
-// sequelize.sync({ force: false }).then(() => {
-//   app.listen(PORT, () => console.log('Now listening'));
-// });
-
-app.listen(PORT, () => {
-  console.log('Server listening on: http://localhost:' + PORT);
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
 });
+
+// app.listen(PORT, () => {
+//   console.log('Server listening on: http://localhost:' + PORT);
+// });
 

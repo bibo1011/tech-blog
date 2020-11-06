@@ -96,7 +96,7 @@ form input{
 .signup-form button {
   background-color: #225ca3;
   border: 0;
-  padding: 10px 557px 10px 631px;
+  padding: .75% 46%;
   color: white;
   font-weight: bold;
   transition: background-color .1s;
@@ -107,7 +107,7 @@ form input{
 .login-form button {
   background-color: #225ca3;
   border: 0;
-  padding: 10px 632px 10px 632px;
+  padding: 1% 48%;
   color: white;
   font-weight: bold;
   transition: background-color .1s;
@@ -115,6 +115,17 @@ form input{
   border-radius: 5px;
   margin: 10px;
   
+  
+}
+.btn-no-style{
+  text-decoration: none;
+  color: #225ca3;
+  font-weight: bold;
+  transition: color .1s;
+  padding: 5px;
+  border: 0;
+  background-color:  #fc5c65;
+  font-size: 15px;
 }
 button:hover {
   background-color: #3486eb;

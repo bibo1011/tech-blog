@@ -13,12 +13,16 @@
         <li>
           <a href="/">Home</a>
         </li>
+        {{#if loggedIn}}
         <li>
           <a href="/dashboard">Dashboard</a>
         </li>
         <li>
+          <button id="logout" class="btn-no-style">Logout</button>
+          {{else}}
           <a href="/login">Login</a>
         </li>
+        {{/if}}
       </ul>
       <h2>
       The Tech Blog
@@ -31,5 +35,8 @@
   <footer>
       &copy; copyright 2020 a_bad_b
   </footer>
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 </body>
 </html>
