@@ -11,7 +11,8 @@ router.get('/', (req, res) => {
         'id',
         'content',
         'title',
-        'created_at',
+        'user_id',
+        'created_at'
       ],
       // include: [
       //   {
@@ -32,6 +33,7 @@ router.get('/', (req, res) => {
         // pass a single post object into the homepage template
         console.log(dbPostData[0]);
         const posts = dbPostData.map(post => post.get({ plain: true }));
+        // add the user that make the post
         res.render('homepage', {
           posts,
           loggedIn: req.session.loggedIn
