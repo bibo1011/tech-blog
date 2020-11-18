@@ -86,7 +86,7 @@ router.post('/login', (req, res) => {
         // add comment syntax in front of this line in the .then()
         // res.json({ user: dbUserData })
 
-        // // Verify user
+        // Verify user
         const validPassword = dbUserData.checkPassword(req.body.password);
         if (!validPassword) {
             res.status(400).json({ message: 'Incorrect password!' });
