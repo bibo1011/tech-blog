@@ -56,7 +56,7 @@
 
   ## *Github*
    
-  https://github.com/https://github.com/bibo1011
+  bibo1011
 
   ## *Email* 
 
