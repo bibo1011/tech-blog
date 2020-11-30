@@ -10,10 +10,14 @@
     <button type="submit">add comment</button>
   </div>
 </form>
+<section>
+  <div class="your-post">
+    <h3>Comments</h3>
+  </div>
 {{/if}}
 
 {{> comments post.comments}}
-
+</section>
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 {{/if}}

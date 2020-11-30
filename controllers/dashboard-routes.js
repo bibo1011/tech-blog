@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/dashboard', withAuth, (req, res) => {
+router.get('/', withAuth, (req, res) => {
     console.log(req.session);
     Post.findAll({
         where: {
@@ -53,20 +53,20 @@ router.get('/edit/:id', withAuth, (req, res) => {
             'title',
             'created_at',
         ],
-        // include: [
-        //   {
-        //     model: Comment,
-        //     attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-        //     include: {
-        //       model: User,
-        //       attributes: ['username']
-        //     }
-        //   },
-        //   {
-        //     model: User,
-        //     attributes: ['username']
-        //   }
-        // ]
+        include: [
+          {
+            model: Comment,
+            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            include: {
+              model: User,
+              attributes: ['username']
+            }
+          },
+          {
+            model: User,
+            attributes: ['username']
+          }
+        ]
     })
     .then(dbPostData => {
         if (dbPostData) {
@@ -85,3 +85,5 @@ router.get('/edit/:id', withAuth, (req, res) => {
     });
     
 });
+
+module.exports = router

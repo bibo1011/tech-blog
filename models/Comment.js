@@ -1,6 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-// const { beforeDestroy } = require('./User');
 
 class Comment extends Model {}
 
@@ -30,7 +29,6 @@ Comment.init(
           key: 'id'
         }
     }
-    // columns will go here
   },
   {
     sequelize,
