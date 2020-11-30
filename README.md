@@ -42,7 +42,7 @@
 
   ## *Badges*
 
-  ![alt text](https://img.shields.io/badge/license--blueviolet?style=for-the-badge&logo=appveyor "license badge")
+  ![alt text](https://img.shields.io/badge/license-GNU_AGPLv3-blueviolet?style=for-the-badge&logo=appveyor "license badge")
 
   ## *Contributing*
    
@@ -50,7 +50,7 @@
 
   ## *Test*
    
-  test
+  Link to app: https://peaceful-depths-49804.herokuapp.com/
 
   # Contact Info
 
