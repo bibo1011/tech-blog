@@ -30,6 +30,10 @@
    
   This app use the following packages and needed to be install before running server: bcrypt, connect-session-sequelize, dotenv, express, express-handlebars, express-session, handlebars, mysql2, path and sequelize.
 
+  Screenshots:
+  ![alt text](https://github.com/bibo "Logo Title Text 1")
+
+
   ## *Credits*
    
   UCB Bootcamp
