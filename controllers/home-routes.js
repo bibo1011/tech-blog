@@ -15,14 +15,14 @@ router.get('/', (req, res) => {
         'created_at'
       ],
       include: [
-        // {
-        //   model: Comment,
-        //   attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-        //   include: {
-        //     model: User,
-        //     attributes: ['username']
-        //   }
-        // },
+        {
+          model: Comment,
+          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+          include: {
+            model: User,
+            attributes: ['username']
+          }
+        },
         {
           model: User,
           attributes: ['username']
@@ -59,23 +59,6 @@ router.get('/signup', (req, res) => {
   }
   res.render('signup');
 });
-
-// hardcoding the post data is an easier way to test the template
-// router.get('/post/:id', (req, res) => {
-//   const post = {
-//     id: 1,
-//     post_url: 'https://handlebarsjs.com/guide/',
-//     title: 'Handlebars Docs',
-//     created_at: new Date(),
-//     vote_count: 10,
-//     comments: [{}, {}],
-//     user: {
-//       username: 'test_user'
-//     }
-//   };
-
-//   res.render('single-post', { post });
-// });
 
 router.get('/post/:id', (req, res) => {
   Post.findOne({

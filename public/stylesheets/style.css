@@ -73,8 +73,9 @@ a:hover {
 form{
   border: solid;
 }
-form > div {
-  margin-bottom: 2%;
+.signup{
+  padding: 10px;
+  font-size: 20px;
 }
 form label {
   display: block;
@@ -136,4 +137,41 @@ footer {
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+}
+.content{
+  background-color: #20bf6b;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px
+}
+.comment-form{
+  line-height: 150%;
+  border: solid;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #45aaf2;
+}
+.comment-form button{
+  font-weight: bold;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border: 0;
+  background-color:  #225ca3;
+  transition: background-color .1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+textarea{
+  padding: 10px 1100px 10px 5px;
+  background-color: #eb3b5a;
+}
+.comments{
+  line-height: 150%;
+  border: solid;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #4b6584;
 }
